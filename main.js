@@ -39,9 +39,10 @@ gridStyle.innerHTML = ".grid-container { \
     body { background-color: #14151f; }\
     .text { \
         color: white; \
-        font-size: 2em;\
+        font-size: 1.7em;\
         width: 100%; \
         height: 40%; \
+        line-height: 250%; \
         text-align: center; \
         margin-top: 62%; \
         border-radius: 0 0 30px 30px; \
