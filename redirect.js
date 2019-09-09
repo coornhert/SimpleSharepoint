@@ -1,0 +1,1 @@
+window.location = "https://coornhert.sharepoint.com/SitePages/123.aspx";

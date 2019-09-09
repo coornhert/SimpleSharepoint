@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "SimpleSharepoint",
+    "version": "0.0.4",
+  
+    "description": "Because the current page sucks",
+  
+    "icons": {
+      "48": "icon.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["https://coornhert.sharepoint.com/sites/*"],
+        "js": ["redirect.js"],
+        "run_at": "document_start"
+      },
+	  {
+        "matches": ["https://coornhert.sharepoint.com/SitePages/123.aspx"],
+        "js": ["main.js"],
+        "run_at": "document_end"
+      }
+    ]
+  
+  }
