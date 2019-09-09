@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "SimpleSharepoint",
-    "version": "0.1.4",
+    "version": "0.1.5",
   
     "description": "Because the current page sucks",
   
@@ -20,6 +20,16 @@
         "js": ["main.js"],
         "run_at": "document_end"
       }
-    ]
+    ],
+    "applications": {
+        "gecko": {
+            "update_url": "https://raw.githubusercontent.com/coornhert/SimpleSharepoint/master/updates.json"
+        }
+    },
+    "browser_specific_settings": {
+        "gecko": {
+            "update_url": "https://raw.githubusercontent.com/coornhert/SimpleSharepoint/master/updates.json"
+        }
+    }
   
   }

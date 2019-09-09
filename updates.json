@@ -1,0 +1,17 @@
+ 
+{
+  "addons": {
+    "{f161b283-a201-4021-95ed-f746badfd1c3}": {
+      "updates": [
+        { "version": "0.1.2",
+          "update_link": "https://github.com/coornhert/SimpleSharepoint/releases/download/v0.1.2/betterzermelo-0.1.2-an+fx.xpi" },
+        { "version": "0.1.3",
+          "update_link": "https://github.com/coornhert/SimpleSharepoint/releases/download/v0.1.3/betterzermelo-0.1.3-an+fx.xpi"},
+        { "version": "0.1.4",
+          "update_link": "https://github.com/coornhert/SimpleSharepoint/releases/download/v0.1.4/betterzermelo-0.1.4-an+fx.xpi"},
+        { "version": "0.1.5",
+          "update_link": "https://github.com/coornhert/SimpleSharepoint/releases/download/v0.1.5/betterzermelo.xpi"}
+      ]
+    }
+  }
+}
