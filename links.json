@@ -1,4 +1,5 @@
-{"name": "Agenda", "link": "https://outlook.office365.com/owa/?realm=coornhert.onmicrosoft.com&exsvurl=1&ll-cc=1043&modurl=1", "image": "https://coornhert.sharepoint.com/pictos/agenda.png"},
+[
+    {"name": "Agenda", "link": "https://outlook.office365.com/owa/?realm=coornhert.onmicrosoft.com&exsvurl=1&ll-cc=1043&modurl=1", "image": "https://coornhert.sharepoint.com/pictos/agenda.png"},
     {"name": "Keuzerooster", "link": "https://coornhert.sharepoint.com/kernkeuze", "image": "https://coornhert.sharepoint.com/Pictos/kernkeuze.PNG"},
     {"name": "Learnbeat", "link": "https://inloggen.learnbeat.nl/users/login", "image": "https://i.postimg.cc/QdxbZPx3/lb.png"},
     {"name": "Leerlingenraad", "link": "https://coornhert.sharepoint.com/Leerlingenraad/Forms/AllItems.aspx", "image": "https://coornhert.sharepoint.com/pictos/personen.png"},
@@ -10,3 +11,4 @@
     {"name": "SOM", "link": "https://somtoday.nl/azure?tenant=coornhert-gymnasium.nl", "image": "https://coornhert.sharepoint.com/Pictos/SOM2DAY.png"},
     {"name": "WisWeb", "link": "https://app.dwo.nl/leerling/", "image": "http://www.michelhoekstra.net/wp-content/uploads/2016/01/Numworx-Favicon-300x300.png"},
     {"name": "Zermelo", "link": "https://myapps.microsoft.com/signin/Zermelo/f999fd7a82784b578691fe3af2c9a17d", "image": "https://coornhert.sharepoint.com/pictos/zermelo.png"},
+]
