@@ -10,5 +10,5 @@
     {"name": "Roosterpunt", "link": "https://saml.roosterpunt.nl/auth/azure_start.php", "image": "https://coornhert.sharepoint.com/pictos/roosterpunt.png"},
     {"name": "SOM", "link": "https://somtoday.nl/azure?tenant=coornhert-gymnasium.nl", "image": "https://coornhert.sharepoint.com/Pictos/SOM2DAY.png"},
     {"name": "WisWeb", "link": "https://app.dwo.nl/leerling/", "image": "http://www.michelhoekstra.net/wp-content/uploads/2016/01/Numworx-Favicon-300x300.png"},
-    {"name": "Zermelo", "link": "https://myapps.microsoft.com/signin/Zermelo/f999fd7a82784b578691fe3af2c9a17d", "image": "https://coornhert.sharepoint.com/pictos/zermelo.png"},
+    {"name": "Zermelo", "link": "https://myapps.microsoft.com/signin/Zermelo/f999fd7a82784b578691fe3af2c9a17d", "image": "https://coornhert.sharepoint.com/pictos/zermelo.png"}
 ]
