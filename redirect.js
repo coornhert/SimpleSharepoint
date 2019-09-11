@@ -1,1 +1,1 @@
-window.location = "https://coornhert.sharepoint.com/SitePages/123.aspx";
+location.href = "https://coornhert.sharepoint.com/SitePages/123.aspx"

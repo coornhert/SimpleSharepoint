@@ -2,22 +2,28 @@
     "manifest_version": 2,
     "name": "SimpleSharepoint",
     "version": "0.1.5",
-  
     "description": "Because the current page sucks",
   
     "icons": {
       "48": "icon.png"
     },
+    
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "https://coornhert.sharepoint.com/*",
+        "storage"
+    ],
   
     "content_scripts": [
-      {
-        "matches": ["https://coornhert.sharepoint.com/sites/portal"],
-        "js": ["redirect.js"],
-        "run_at": "document_start"
-      },
 	  {
         "matches": ["https://coornhert.sharepoint.com/SitePages/123.aspx"],
         "js": ["main.js"],
+        "run_at": "document_end"
+      },
+      {
+        "matches": ["https://coornhert.sharepoint.com/sites/portal"],
+        "js": ["redirect.js"],
         "run_at": "document_end"
       }
     ],
@@ -28,8 +34,15 @@
     },
     "browser_specific_settings": {
         "gecko": {
-            "update_url": "https://raw.githubusercontent.com/coornhert/SimpleSharepoint/master/updates.json"
+            "update_url": "https://raw.githubusercontent.com/coornhert/SimpleSharepoint/master/updates.json",
+            "id": "{f161b283-a201-4021-95ed-f746badfd1c3}"
         }
+    },
+    
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_title": "SimpleSharepoint",
+        "default_popup": "popup/index.html"
     }
   
   }
