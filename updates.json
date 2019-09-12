@@ -12,7 +12,9 @@
         { "version": "0.1.5",
           "update_link": "https://github.com/coornhert/SimpleSharepoint/releases/download/v0.1.5/SimpleSharepoint.xpi"},
         { "version": "0.2.0",
-          "update_link": "https://github.com/coornhert/SimpleSharepoint/releases/download/v0.2.0/SimpleSharepoint.xpi"}
+          "update_link": "https://github.com/coornhert/SimpleSharepoint/releases/download/v0.2.0/SimpleSharepoint.xpi"},
+        { "version": "0.2.1",
+          "update_link": "https://github.com/coornhert/SimpleSharepoint/releases/download/v0.2.1/SimpleSharepoint.xpi"}
       ]
     }
   }

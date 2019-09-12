@@ -37,6 +37,7 @@ function requestLinks() {
         {"order": 11, "used": true, "name": "Zermelo", "link": "https://myapps.microsoft.com/signin/Zermelo/f999fd7a82784b578691fe3af2c9a17d", "image": "https://coornhert.sharepoint.com/pictos/zermelo.png"}
     ]
     save();
+    return links;
   }
 
 try {
@@ -61,6 +62,9 @@ function dynamicSort(property) {
 
 function addButtons (results) {
     links = results["SimpleSharepointLinks"];
+    if (links == undefined) {
+        links = requestLinks();
+    }
     console.log(links);
     var x = 0;
     for (index in links) {if (links[index].used) {x++;} }
@@ -136,5 +140,6 @@ else if (platform == "chrome") {
     }
     catch (error) {
         requestLinks();
+        addButtons({SimpleSharepointLinks: links});
     }
 }
