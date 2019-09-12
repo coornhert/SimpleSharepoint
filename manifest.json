@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "SimpleSharepoint",
-    "version": "0.1.5",
+    "version": "0.2.0",
     "description": "Because the current page sucks",
   
     "icons": {
@@ -9,8 +9,6 @@
     },
     
     "permissions": [
-        "webRequest",
-        "webRequestBlocking",
         "https://coornhert.sharepoint.com/*",
         "storage"
     ],

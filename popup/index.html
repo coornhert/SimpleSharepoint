@@ -1,5 +1,8 @@
 <meta http-equiv="Content-Security-Policy" content="script-src *">
 
+<meta charset="UTF-8">
+
+
 <script src="index.js"></script>
 
 <style>
@@ -9,10 +12,21 @@ body {
 .container {
     display: flex;
     min-height: 40px;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    /* Required to make elements draggable in old WebKit */
+    -khtml-user-drag: element;
+    -webkit-user-drag: element;
+}
+.container.over {
+  outline: 5px solid lightblue;
 }
 .text {
     max-width: 50vw;
     font-size: 1em;
+    cursor: move;
 }
 .buttonContainer {
     width: 100%;
