@@ -63,13 +63,23 @@ function addButtons() {
       button.type = "checkbox";
       button.id = i;
       button.checked = sorted[i].used;
-      var span = document.createElement("span");
-      span.className = "slider";
+      var slider = document.createElement("span");
+      slider.className = "slider";
+
+      var remButton = document.createElement("div");
+      remButton.classList = "remButton";
+      remButton.innerText = "-";
+
+      if (sorted[i]["custom"]) {
+        label.appendChild(remButton);
+        remButton.onclick = removeCustom;
+        remButton.id = sorted[i].name;
+      }
 
       buttonContainer.appendChild(label);
 
       label.appendChild(button);
-      label.appendChild(span);
+      label.appendChild(slider);
 
       container.appendChild(name);
       container.appendChild(buttonContainer);
@@ -246,6 +256,16 @@ function submitCustom() {
     custom: true
   }
   links.push(newItem);
+  save();
+}
+
+function removeCustom() {
+  x = this.parentNode.parentNode.parentNode.childNodes[0].id;
+  for (var i = 0; i < links.length; i++) {
+    if (links[i].order == x) {
+      links.pop(i);
+    }
+  }
   save();
 }
 
