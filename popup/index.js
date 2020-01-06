@@ -7,6 +7,9 @@ var sorted;
 var form;
 var cols;
 var platform;
+var customOpen;
+var customVisible = false;
+var customContainer;
 
 try {
   browser;
@@ -220,11 +223,26 @@ function dynamicSort(property) {
   }
 }
 
+function toggleCustom() {
+  if (customVisible) {
+    customVisible = false;
+    customContainer.style.display = "none";
+  }
+  else {
+    customVisible = true;
+    customContainer.style.display = "block";
+    customOpen.style.display = "none";
+  }
+}
+
 window.onload = function() {
 
-  form = document.createElement("form");
-  form.id = "mainForm";
-  document.body.appendChild(form);
+  form = document.getElementById("links");
+
+  customContainer = document.getElementById("custom");
+
+  customOpen = document.getElementById("customOpen");
+  customOpen.addEventListener("click", toggleCustom);
 
   restoreOptions();
   

@@ -3,90 +3,182 @@
 <meta charset="UTF-8">
 
 
-<script src="index.js"></script>
+<html>
+  <head>
+    <script src="index.js"></script>
 
-<style>
-body {
-    min-width: 200px;
-}
-.container {
-    display: flex;
-    min-height: 40px;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    user-select: none;
-    /* Required to make elements draggable in old WebKit */
-    -khtml-user-drag: element;
-    -webkit-user-drag: element;
-}
-.container.over {
-  outline: 5px solid lightblue;
-}
-.text {
-    max-width: 50vw;
-    font-size: 1em;
-    cursor: move;
-}
-.buttonContainer {
-    width: 100%;
-    float: right;
-}
-.switch {
-  position: relative;
-  top: 0px;
-  width: 50px;
-  height: 24px;
-  float: right;
-}
+    <style>
+    body {
+        width: 300px;
+        overflow-x: hidden;
+    }
+    .container {
+        display: flex;
+        min-height: 40px;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+        /* Required to make elements draggable in old WebKit */
+        -khtml-user-drag: element;
+        -webkit-user-drag: element;
+    }
+    .container.over {
+      outline: 5px solid lightblue;
+    }
+    .text {
+        max-width: 50vw;
+        font-size: 1em;
+        cursor: move;
+    }
+    .buttonContainer {
+        width: 100%;
+        float: right;
+    }
+    .switch {
+      position: relative;
+      top: 0px;
+      right: 10px;
+      width: 50px;
+      height: 24px;
+      float: right;
+    }
 
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
+    /* Hide default HTML checkbox */
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
 
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .2s;
-  transition: .2s;
-  border-radius: 34px;
-  display: inline;
-}
+    /* The slider */
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .2s;
+      transition: .2s;
+      border-radius: 34px;
+      display: inline;
 
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 16px;
-  width: 16px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .2s;
-  transition: .2s;
-  border-radius: 50%;
-  display: inline;
-}
+      overflow-x: auto;
+    }
 
-input:checked + .slider {
-  background-color: #2196F3;
-}
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: .2s;
+      transition: .2s;
+      border-radius: 50%;
+      display: inline;
+    }
 
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
 
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-</style>
+    input:focus + .slider {
+      box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
+
+    #links {
+      overflow-y: auto;
+      height: 400px;
+    }
+
+    ctext {
+      font-size: 1em;
+      line-height: 1.5em;
+    }
+
+    .customInput {
+      float: right;
+      width: 75vw;
+    }
+
+    .customList {
+      padding-left: 0px;
+    }
+
+    #custom {
+      display: none;
+    }
+
+    .customOpen {
+      background-color: #009C46;
+      color: white;
+      border-radius: 5px;
+      width: 100px;
+      padding: 5px;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    #customSubmit {
+      background-color: #009C46;
+      color: white;
+      border-radius: 5px;
+      width: 96%;
+      padding: 5px;
+      display: inline-block;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .customWrapper {
+      text-align: center;
+    }
+
+    #vertSpacer {
+      background-color: gray;
+      border-radius: 10px;
+      width: 98%;
+      height: 5px;
+      margin: 15px 0px 10px 0px;
+    }
+
+    </style>
+  </head>
+
+  <body>
+    
+    <div id="links"></div>
+    <div class="customWrapper">
+      <div class="customOpen" id="customOpen">Add new</div>
+    </div>
+
+    <form id="custom">
+      <div id="vertSpacer"></div>
+      <ul class="customList">
+        <ctext>Name:</ctext>
+        <input id="customName" class="customInput"/>
+      </ul>
+      <ul class="customList">
+        <ctext>URL:</ctext>
+        <input id="customURL" class="customInput"/>
+      </ul>
+      <ul class="customList">
+        <ctext>Image:</ctext>
+        <input id="customImage" class="customInput"/>
+      </ul>
+
+      <div id="customSubmit">Submit</div>
+    </form>
+
+  </body>
+</html>
