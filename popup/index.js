@@ -22,7 +22,7 @@ catch (error) {
 
 function requestLinks() {
   links = [
-    {"order": 0, "used": true, "name": "Agenda", "link": "https://outlook.office365.com/owa/?realm=coornhert.onmicrosoft.com&exsvurl=1&ll-cc=1043&modurl=1", "image": "https://coornhert.sharepoint.com/pictos/agenda.png"},
+    {"order": 0, "used": true, "name": "Agenda", "link": "https://outlook.office365.com/owa/?realm=coornhert.onmicrosoft.com&exsvurl=1&ll-cc=1043&modurl=1", "image": "https://i.postimg.cc/x80RW9bs/on-color-large.png"},
     {"order": 1, "used": true, "name": "Keuzerooster", "link": "https://coornhert.sharepoint.com/kernkeuze", "image": "https://coornhert.sharepoint.com/Pictos/kernkeuze.PNG"},
     {"order": 2, "used": true, "name": "Learnbeat", "link": "https://inloggen.learnbeat.nl/users/login", "image": "https://i.postimg.cc/QdxbZPx3/lb.png"},
     {"order": 3, "used": true, "name": "Leerlingenraad", "link": "https://coornhert.sharepoint.com/Leerlingenraad/Forms/AllItems.aspx", "image": "https://coornhert.sharepoint.com/pictos/personen.png"},
@@ -257,16 +257,19 @@ function submitCustom() {
   }
   links.push(newItem);
   save();
+  window.location.href="index.html";
 }
 
 function removeCustom() {
-  x = this.parentNode.parentNode.parentNode.childNodes[0].id;
+  x = this.id;
   for (var i = 0; i < links.length; i++) {
-    if (links[i].order == x) {
-      links.pop(i);
+    if (links[i].name == x) {
+      links.splice(i, 1);
+      this.parentNode.parentNode.parentNode.remove();
     }
   }
   save();
+  window.location.href="index.html";
 }
 
 window.onload = function() {

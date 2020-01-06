@@ -14,7 +14,7 @@
     }
     .container {
         display: flex;
-        min-height: 40px;
+        min-height: 30px;
         -moz-user-select: none;
         -khtml-user-select: none;
         -webkit-user-select: none;
@@ -22,6 +22,10 @@
         /* Required to make elements draggable in old WebKit */
         -khtml-user-drag: element;
         -webkit-user-drag: element;
+
+        border-bottom: 1px solid gray;
+        margin-bottom: 5px;
+        padding-bottom: none;
     }
     .container.over {
       outline: 5px solid lightblue;
@@ -133,7 +137,8 @@
       background-color: #009C46;
       color: white;
       border-radius: 5px;
-      width: 96%;
+      width: 50%;
+      align-self: center;
       padding: 5px;
       display: inline-block;
       text-align: center;
@@ -147,9 +152,10 @@
     #vertSpacer {
       background-color: gray;
       border-radius: 10px;
-      width: 98%;
+      right: 10px;
+      left: 10px;
+      margin-top: 5px;
       height: 5px;
-      margin: 15px 0px 10px 0px;
     }
 
     .remButton {
@@ -191,7 +197,9 @@
         <input id="customImage" class="customInput"/>
       </ul>
 
-      <div id="customSubmit">Submit</div>
+      <div class="customWrapper">
+        <div id="customSubmit">Submit</div>
+      </div>
     </form>
 
   </body>
