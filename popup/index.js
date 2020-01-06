@@ -10,6 +10,7 @@ var platform;
 var customOpen;
 var customVisible = false;
 var customContainer;
+var customSubmit;
 
 try {
   browser;
@@ -235,13 +236,28 @@ function toggleCustom() {
   }
 }
 
+function submitCustom() {
+  var newItem = {
+    order: links.length,
+    used: true,
+    name: document.getElementById("customName").value,
+    link: document.getElementById("customURL").value,
+    image: document.getElementById("customImage").value,
+    custom: true
+  }
+  links.push(newItem);
+  save();
+}
+
 window.onload = function() {
 
   form = document.getElementById("links");
 
   customContainer = document.getElementById("custom");
-
+  customSubmit = document.getElementById("customSubmit");
   customOpen = document.getElementById("customOpen");
+
+  customSubmit.addEventListener("click", submitCustom);
   customOpen.addEventListener("click", toggleCustom);
 
   restoreOptions();
