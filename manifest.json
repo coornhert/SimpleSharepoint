@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "SimpleSharepoint",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "description": "Because the current page sucks",
   
     "icons": {
@@ -10,8 +10,16 @@
     
     "permissions": [
         "https://coornhert.sharepoint.com/*",
-        "storage"
+        "storage",
+        "webRequest",
+        "webRequestBlocking"
     ],
+
+    "background": {
+      "scripts": [
+        "background.js"
+      ]
+    },
   
     "content_scripts": [
 	  {
@@ -19,11 +27,6 @@
         "js": ["main.js"],
         "run_at": "document_end"
       },
-      {
-        "matches": ["https://coornhert.sharepoint.com/sites/portal"],
-        "js": ["redirect.js"],
-        "run_at": "document_end"
-      }
     ],
     "applications": {
         "gecko": {
