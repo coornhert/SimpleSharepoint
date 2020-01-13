@@ -15,7 +15,7 @@ chrome.webRequest.onBeforeRequest.addListener(
       "https://coornhert.sharepoint.com/",
       "https://coornhert.sharepoint.com/sites/portal"
     ],
-    types: ["main_frame", "sub_frame", "stylesheet", "script", "image", "object", "xmlhttprequest", "other"]
+    types: ["main_frame"]
   },
   ["blocking"]
 )
