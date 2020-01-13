@@ -26,8 +26,9 @@
         "matches": ["https://coornhert.sharepoint.com/SitePages/123.aspx"],
         "js": ["main.js"],
         "run_at": "document_end"
-      },
+      }
     ],
+    
     "applications": {
         "gecko": {
             "update_url": "https://raw.githubusercontent.com/coornhert/SimpleSharepoint/master/updates.json"
