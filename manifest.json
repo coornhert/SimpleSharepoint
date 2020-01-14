@@ -9,7 +9,7 @@
     },
     
     "permissions": [
-        "https://coornhert.sharepoint.com/*",
+        "https://coornhert.sharepoint.com/",
         "storage",
         "webRequest",
         "webRequestBlocking"
